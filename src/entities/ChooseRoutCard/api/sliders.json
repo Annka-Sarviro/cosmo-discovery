@@ -1,0 +1,20 @@
+{
+"slider1": {
+    "id": 1,
+    "title": "Hitchhiking through the solar system route",
+    "src": "/slider4.png",
+    "description": "description1"
+},
+"slider2": {
+    "id": 2,
+    "title": "Kyiv-Saturn Rally",
+    "src": "/slider2.png",
+    "description": "description2"
+},
+"slider3": {
+    "id": 3,
+    "title": "Back to the constellation of Aquarius",
+    "src": "/slider3.png",
+    "description": "description"
+}
+}

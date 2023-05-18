@@ -1,8 +1,9 @@
-import ChooseRoutSlider from '@/entities/ChooseRoutSlider/ChooseRoutSlider';
+import ChooseRoutSlider from '@/widgets/ChooseRoutSlider/ChooseRoutSlider';
 import Bookmark from '@/shared/ui/Bookmark/Bookmark';
+import { SliderObject } from '../../pages/api/SliderObject';
 import Image from 'next/image';
 
-const ShooseRoutSection = () => {
+const ShooseRoutSection = (data: SliderObject) => {
   return (
     <section id="shooseRoute" className="bg-darkBloue.90 relative">
       <div className="z-0">
@@ -17,7 +18,7 @@ const ShooseRoutSection = () => {
       </div>
       <Bookmark className="mt-[68px]">Choose you route</Bookmark>
       <div className="container pt-[68px] pb-[90px]">
-        <ChooseRoutSlider />
+        <ChooseRoutSlider {...data} />
         <p className="text-center before:content-[''] before:block before:bg-white before:mb-9  before:w-[260px] before:h-1 before:shadow-accentShadow before:mx-auto">
           Not finding what you&apos;re looking for? - just give us a call!
         </p>
