@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const Hero: NextPage = () => {
   return (
-    <div className="relative">
+    <section id="hero" className="relative">
       <div className="container h-[100vh] flex flex-col items-end justify-between text-right pt-[165px] pb-[88px] max-w-[410px] ml-auto mr-0 ">
         <p>
           If you are up for that adventure, if you are realy free, discover new space routes with us
@@ -26,7 +26,7 @@ const Hero: NextPage = () => {
           className="-z-50 absolute "
         />
       </div>
-    </div>
+    </section>
   );
 };
 

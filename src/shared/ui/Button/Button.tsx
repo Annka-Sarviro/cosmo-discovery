@@ -1,4 +1,5 @@
 import { PropsWithChildren, FC } from 'react';
+import Link from 'next/link';
 
 interface ButtonProps {
   className?: string;
@@ -6,9 +7,9 @@ interface ButtonProps {
 
 const Button: FC<PropsWithChildren<ButtonProps>> = props => {
   return (
-    <button className={`btn ${props.className}`} type="button">
+    <Link href="/contact" className={`btn ${props.className}`}>
       {props.children}
-    </button>
+    </Link>
   );
 };
 

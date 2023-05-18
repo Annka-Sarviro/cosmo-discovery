@@ -31,7 +31,7 @@ body {
 
   .btn {
     padding: 16px 52px;
-    border-radius: theme('borderRadius.rad16');
+    border-radius: theme('borderRadius.rad32');
     background-color: theme('colors.darkBlue.90');
     box-shadow: theme('boxShadow.buttonShadow');
     text-shadow: theme('boxShadow.accentShadow');
@@ -42,5 +42,18 @@ body {
     cursor: pointer;
     text-shadow: theme('boxShadow.accentHoverShadow');
     box-shadow: theme('boxShadow.buttonHoverShadow');
+  }
+
+  .bookmark {
+    display: inline-block;
+    padding: 16px 52px 16px;
+    border-top-right-radius: theme('borderRadius.rad32');
+    border-bottom-right-radius: theme('borderRadius.rad32');
+    background-color: theme('colors.purple.30');
+    color: theme('colors.darkBlue.90');
+    text-shadow: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    min-width: 354px;
   }
 }

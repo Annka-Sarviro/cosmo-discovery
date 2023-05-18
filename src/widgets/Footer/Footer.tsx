@@ -1,7 +1,11 @@
 import { FC } from 'react';
 
 const Footer: FC = () => {
-  return <div>&copy; Footer</div>;
+  return (
+    <div id="hero" className="container text-end text-xl py-10">
+      &copy; Sarviro Ganna, 2023
+    </div>
+  );
 };
 
 export default Footer;
