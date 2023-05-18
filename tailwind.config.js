@@ -45,7 +45,9 @@ module.exports = {
         rad32: '32px',
       },
       backgroundImage: {
-        'hero-background': "url('/hero.png')"
+        'hero-background': "url('/hero.png')",
+        'leftDots': "url('/lestDots.svg)",
+        'rightDots': "url('/rightDots.svg)",
       },
       zIndex: {
         '0': '-1'
