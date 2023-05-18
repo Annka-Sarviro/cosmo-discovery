@@ -10,7 +10,7 @@ const NavBar = () => {
         smooth={true}
         offset={-100}
         duration={500}
-        className="hover:text-shadow-accentHoverShadow transition-shadow"
+        className="hover:text-shadow-accentHoverShadow transition-shadow cursor-pointer"
       >
         Home
       </Link>
@@ -19,9 +19,9 @@ const NavBar = () => {
         to="shooseRoute"
         spy={true}
         smooth={true}
-        offset={-100}
+        // offset={-100}
         duration={500}
-        className="ml-10 hover:text-shadow-accentHoverShadow"
+        className="ml-10 hover:text-shadow-accentHoverShadow transition-shadow cursor-pointer"
       >
         Choose route
       </Link>

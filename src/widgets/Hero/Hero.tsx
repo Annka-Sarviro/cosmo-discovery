@@ -1,5 +1,5 @@
 import { NextPage } from 'next';
-import Button from '@/shared/ui/Button/Button';
+import Button from '@/shared/ui/LinkButton/LinkButton';
 import Image from 'next/image';
 
 const Hero: NextPage = () => {
@@ -21,9 +21,8 @@ const Hero: NextPage = () => {
           src="/hero.png"
           alt="cosmos bakcground image"
           layout="fill"
-          objectFit="cover"
           object-position="50% 50%"
-          className="-z-50 absolute "
+          className="-z-50 absolute object-cover"
         />
       </div>
     </section>
