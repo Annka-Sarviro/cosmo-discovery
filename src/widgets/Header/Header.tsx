@@ -1,6 +1,6 @@
 import Logo from '../Logo/Logo';
-import NavBar from '../NavBar/NavBar';
-import ContactNavBar from '../NavBar/ContactNavBar';
+import NavBar from '../NavBar/ui/NavBar';
+import ContactNavBar from '../NavBar/ui/ContactNavBar';
 import { useRouter } from 'next/router';
 
 const Header = () => {
