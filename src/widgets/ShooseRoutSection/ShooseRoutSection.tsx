@@ -2,6 +2,7 @@ import ChooseRoutSlider from '@/widgets/ChooseRoutSlider/ChooseRoutSlider';
 import Bookmark from '@/shared/ui/Bookmark/Bookmark';
 import { SliderObject } from '../../pages/api/SliderObject';
 import Image from 'next/image';
+import Phone from '../../../public/phone.svg';
 
 const ShooseRoutSection = (data: SliderObject) => {
   return (
@@ -19,9 +20,12 @@ const ShooseRoutSection = (data: SliderObject) => {
       <Bookmark className="mt-[68px]">Choose you route</Bookmark>
       <div className="container pt-[68px] pb-[90px]">
         <ChooseRoutSlider {...data} />
-        <p className="text-center before:content-[''] before:block before:bg-white before:mb-9  before:w-[260px] before:h-1 before:shadow-accentShadow before:mx-auto">
-          Not finding what you&apos;re looking for? - just give us a call!
-        </p>
+        <div className="flex items-center justify-center">
+          <p className="text-center mr-scale-110">
+            Not finding what you&apos;re looking for? - just give us a call!
+          </p>
+          <Phone />
+        </div>
       </div>
     </section>
   );

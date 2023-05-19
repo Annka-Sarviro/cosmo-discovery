@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import LeftDots from '../../../../public/leftDots.svg';
+import RightDots from '../../../../public/rightDots.svg';
 
 type Slide = {
   id: number;
@@ -18,7 +20,13 @@ const ChooseRoutCard = (data: Slide) => {
         width={836}
         className="mx-auto mb-8 rounded-rad16 shadow-slideShadow"
       />
-      <Link href={`/${encodeURIComponent(data.id)}`}>{data.title}</Link>
+      <div className="flex justify-center items-center">
+        <LeftDots />
+        <Link className="mx-4" href={`/${encodeURIComponent(data.id)}`}>
+          {data.title}
+        </Link>
+        <RightDots />
+      </div>
     </div>
   );
 };

@@ -12,7 +12,7 @@ const Logo: FC = () => {
           height={97}
           className="drop-shadow-accentShadow w-auto"
         />
-        <div className="flex items-center text-4xl text-transform: uppercase ml-5 before:content-[''] before:block before:bg-white before:mr-3  before:w-1 before:h-24 before:shadow-accentShadow">
+        <div className="flex items-center font-bold text-4xl text-transform: uppercase ml-5 before:content-[''] before:block before:bg-white before:mr-3  before:w-1 before:h-24 before:shadow-accentShadow">
           <span>
             <p>Challenger</p>
             <p>uncharted path</p>
