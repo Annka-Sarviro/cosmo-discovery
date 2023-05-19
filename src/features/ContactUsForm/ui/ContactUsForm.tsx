@@ -1,5 +1,8 @@
+import toast, { Toaster } from 'react-hot-toast';
 import { PropsWithChildren, FC } from 'react';
 import { useForm, Controller } from 'react-hook-form';
+import formField from '../api/formFields';
+import Field from '@/shared/ui/FormField/Field';
 import Button from '@/shared/ui/Button/Button';
 import { ContactUsFormSchema, contactUsFormSchema } from '../model/ContactUsFormSchema';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -10,9 +13,15 @@ interface ContsctFormProps {
   onComplete?: () => void;
 }
 
+const notify = () =>
+  toast.success('Thank you for your interest, your message has been sent.', {
+    duration: 4000,
+    position: 'top-center',
+  });
+
 const ContactUsForm: FC<PropsWithChildren<ContsctFormProps>> = props => {
   const {
-    formState: { errors },
+    formState: { errors, isValid },
     handleSubmit,
     register,
     control,
@@ -22,65 +31,31 @@ const ContactUsForm: FC<PropsWithChildren<ContsctFormProps>> = props => {
       checkbox: false,
     },
     resolver: yupResolver(ContactUsFormSchema),
+    mode: 'onBlur',
   });
 
-  //  const onSubmitHandler = useCallback(({ email, password }: LoginFormSchema) => {
-  //     dispatch(loginThunk({ email, password }))
-  //       .unwrap()
-  //       .then(() => props.onComplete?.())
-  //       .catch(error => {
-  //         setError('email', { type: 'server', message: error.message });
-  //       });
-  //   }, []);
-
   const onSubmitHandler = (data: contactUsFormSchema) => {
+    notify();
     reset();
-    alert('saend');
-    // console.log(data);
+
+    console.log(data);
   };
+
   return (
     <div className={props.className}>
-      <form onSubmit={handleSubmit(onSubmitHandler)}>
-        <div>
-          <input
-            className="py-4 px-16 rounded-rad32 mb-10 last:mb-0 placeholder:text-gray-600 text-darkBlue-90 bg-purple-10 min-w-[610px] focus:outline-transparent focus:border-transparent"
-            type="text"
-            {...register('name')}
-            // aria-invalid={errors.name ? 'true' : 'false'}
-            placeholder="enter your name*"
-          />
-          <p>{errors.name?.message}</p>
-        </div>
-        <div>
-          <input
-            className="py-4 px-16 rounded-rad32 mb-10 last:mb-0 placeholder:text-gray-600 text-darkBlue-90 bg-purple-10 min-w-[610px] focus:outline-transparent focus:border-transparent"
-            type="phone"
-            {...register('phone')}
-            placeholder="enter your phone*"
-          />
-          <p>{errors.phone?.message}</p>
-        </div>
-        <div>
-          <input
-            className="py-4 px-16 rounded-rad32 mb-10 last:mb-0 placeholder:text-gray-600 text-darkBlue-90 bg-purple-10 min-w-[610px] focus:outline-transparent focus:border-transparent"
-            type="email"
-            {...register('email')}
-            placeholder="enter your email*"
-          />
-          <p className="text-xs">{errors.email?.message}</p>
-        </div>
-        {/* <Controller
+      <Toaster />
+      <form onSubmit={handleSubmit(onSubmitHandler)} className="flex flex-col">
+        {formField.map((el, ind) => (
+          <Field key={ind} data={el} reg={register} errors={errors} />
+        ))}
+        <Controller
           name="checkbox"
           control={control}
           rules={{ required: true }}
-          render={({ field }) => (
-            <Checkbox
-              checked={field.value}
-              onChange={e => field.onChange(e.target.checked)}
-              name={field.name}
-            />
+          render={({ field: { onChange, value, name } }) => (
+            <Checkbox checked={value} onChange={e => onChange(e)} name={name} errors={errors} />
           )}
-        /> */}
+        />
         <Button className="block mx-auto mt-4" type="submit">
           Submit
         </Button>

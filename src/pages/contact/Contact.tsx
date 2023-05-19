@@ -28,7 +28,7 @@ const Contact: NextPage = () => {
           className="-z-10 absolute "
         />
       </div>
-      <section className="pt-52 ">
+      <section className="py-52">
         <Bookmark className="">Contact With us</Bookmark>
         <ContactUsForm className="mt-32 flex justify-center" onComplete={onComplete} />
       </section>
