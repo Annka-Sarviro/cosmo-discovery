@@ -37,7 +37,6 @@ const ContactUsForm: FC<PropsWithChildren<ContsctFormProps>> = props => {
   const onSubmitHandler = (data: contactUsFormSchema) => {
     notify();
     reset();
-
     console.log(data);
   };
 

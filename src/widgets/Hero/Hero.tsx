@@ -4,7 +4,16 @@ import Image from 'next/image';
 
 const Hero: NextPage = () => {
   return (
-    <section id="hero" className="relative">
+    <section id="hero" className="relative h-[100vh]">
+      <div className="z-0 absolute  w-[100vw] h-[auto] overflow-hidden">
+        <Image
+          src="/hero.png"
+          alt="cosmos bakcground image"
+          width={1280}
+          height={1000}
+          className="-z-50 w-[100vw] "
+        />
+      </div>
       <div className="container h-[100vh] flex flex-col items-end justify-between text-right pt-[165px] pb-[88px] max-w-[410px] ml-auto mr-0 ">
         <p>
           If you are up for that adventure, if you are realy free, discover new space routes with us
@@ -15,15 +24,6 @@ const Hero: NextPage = () => {
           courage
         </h1>
         <Button className="z-1">Register now</Button>
-      </div>
-      <div className="z-0">
-        <Image
-          src="/hero.png"
-          alt="cosmos bakcground image"
-          layout="fill"
-          object-position="50% 50%"
-          className="-z-50 absolute object-cover"
-        />
       </div>
     </section>
   );

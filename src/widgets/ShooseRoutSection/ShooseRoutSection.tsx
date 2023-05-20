@@ -7,14 +7,13 @@ import Phone from '../../../public/phone.svg';
 const ShooseRoutSection = (data: SliderObject) => {
   return (
     <section id="shooseRoute" className="bg-darkBloue.90 relative">
-      <div className="z-0">
+      <div className="absolute z-0 w-[100vw] h-[100vh] overflow-hidden">
         <Image
           src="/shooseroute.png"
           alt="stars bacground image"
-          layout="fill"
-          objectFit="cover"
-          object-position="50% 50%"
-          className="-z-10 absolute "
+          width={1280}
+          height={1000}
+          className="-z-10 absolute w-[100vw] h-[auto]"
         />
       </div>
       <Bookmark className="mt-[68px]">Choose you route</Bookmark>
