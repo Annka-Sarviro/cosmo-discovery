@@ -24,7 +24,7 @@ body {
 }
 
 @layer components {
-  .container {
+  .containers {
     margin: 0 auto;
     padding: 0 30px;
   }
@@ -55,5 +55,10 @@ body {
     text-transform: uppercase;
     font-weight: 700;
     min-width: 354px;
+
+    @media (max-width: 767px) {
+      font-size: 16px;
+      min-width: 221px;
+    }
   }
 }

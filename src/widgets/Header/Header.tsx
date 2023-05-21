@@ -7,7 +7,7 @@ const Header = () => {
   const { pathname } = useRouter();
 
   return (
-    <header className=" flex justify-between items-center py-4 fixed px-10 w-[100%] z-20">
+    <header className="containers flex justify-between items-center py-4 fixed w-[100%] z-20">
       <Logo />
       {pathname === '/' ? <NavBar /> : <ContactNavBar />}
     </header>

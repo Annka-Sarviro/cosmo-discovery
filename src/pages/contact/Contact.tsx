@@ -9,19 +9,19 @@ import CosmoImage from '../../../public/astronavt.svg';
 const Contact: NextPage = () => {
   return (
     <Layout title="Contact" description="We like cosmo">
-      <div className="absolute z-0 w-[100vw] h-[100vh] overflow-hidden">
+      <div className="z-0 absolute h-[100vh] w-[100vw]">
         <Image
           src="/shooseroute.png"
           alt="stars bacground image"
-          width={1280}
-          height={1000}
-          className="-z-10 w-[100vw] h-[auto]"
+          fill
+          sizes="100vh"
+          className="-z-10"
         />
       </div>
       <section className="py-52 relative">
-        <Bookmark className="">Contact With us</Bookmark>
+        <Bookmark>Contact With us</Bookmark>
         <ContactUsForm className="mt-32 flex justify-center" />
-        <CosmoImage className="absolute bottom-7 scale-75 right-40" />
+        <CosmoImage className="absolute bottom-[-80px] left-[73px] scale-50 xl:bottom-7 xl:scale-75 xl:left-40" />
       </section>
     </Layout>
   );

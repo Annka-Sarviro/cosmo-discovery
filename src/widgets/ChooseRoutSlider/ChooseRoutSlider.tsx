@@ -12,7 +12,7 @@ const ChooseRoutSlider = (data: SliderObject) => {
   let sliderArr = Object.values(data).map(el => el);
 
   return (
-    <Swiper rewind={true} navigation={true} modules={[Navigation]} className="m-24 ">
+    <Swiper rewind={true} navigation={true} modules={[Navigation]} watchOverflow={true}>
       {sliderArr.map(el => (
         <SwiperSlide className="text-center p-2" key={el.id}>
           <ChooseRoutCard {...el} />

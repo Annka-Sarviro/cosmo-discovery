@@ -8,9 +8,9 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        mobile: '320px',
-        tablet: '768px',
-        desctop: '1480px',
+        xs: '320px',
+        md: '768px',
+        xl: '1480px',
       },
       colors: {
         darkBlue: {

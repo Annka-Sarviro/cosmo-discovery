@@ -12,20 +12,20 @@ type Slide = {
 
 const ChooseRoutCard = (data: Slide) => {
   return (
-    <div>
+    <div className="mb-8">
       <Image
         src={data.src}
         alt={data.description}
         height={522}
         width={836}
-        className="mx-auto mb-8 rounded-rad16 shadow-slideShadow"
+        className="mx-auto max-md:mb-6 mb-8 rounded-rad16 shadow-slideShadow"
       />
       <div className="flex justify-center items-center">
-        <LeftDots />
-        <Link className="mx-4" href={`/${encodeURIComponent(data.id)}`}>
+        <LeftDots className="max-[570px]:invisible" />
+        <Link className="mx-4 max-md:text-base" href={`/${encodeURIComponent(data.id)}`}>
           {data.title}
         </Link>
-        <RightDots />
+        <RightDots className="max-[570px]:invisible" />
       </div>
     </div>
   );

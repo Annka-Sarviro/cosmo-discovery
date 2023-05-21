@@ -3,7 +3,7 @@ import navApi from '../api/navApi';
 
 const ContactNavBar = () => {
   return (
-    <div>
+    <div className="max-md:invisible">
       {navApi.map((el, ind) => (
         <Link
           key={ind}

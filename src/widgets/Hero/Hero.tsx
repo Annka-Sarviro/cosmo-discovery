@@ -4,26 +4,25 @@ import Image from 'next/image';
 
 const Hero: NextPage = () => {
   return (
-    <section id="hero" className="relative h-[100vh]">
-      <div className="z-0 absolute  w-[100vw] h-[auto] overflow-hidden">
+    <section id="hero" className="relative ">
+      <div className="z-0 absolute h-[100vh] w-[100vw]">
         <Image
           src="/hero.png"
           alt="cosmos bakcground image"
-          width={1280}
-          height={1000}
-          className="-z-50 w-[100vw] "
+          fill
+          sizes="100vh"
+          className="-z-50a  object-cover"
         />
       </div>
-      <div className="container h-[100vh] flex flex-col items-end justify-between text-right pt-[165px] pb-[88px] max-w-[410px] ml-auto mr-0 ">
-        <p>
+      <div className="containers h-[100vh] w-[100vw] flex flex-col items-end justify-between text-right max-md:text-base pt-[165px] pb-[88px]">
+        <p className="max-w-[262px] md:max-w-[410px]">
           If you are up for that adventure, if you are realy free, discover new space routes with us
         </p>
-        <h1 className="block absolute  inset-x-1/3 inset-y-1/2 text-5xl text-transform: uppercase text-center">
+        <h1 className="block text-4xl ml-auto mr-auto md:text-5xl text-transform: uppercase text-center">
           find <br />
-          the <br />
-          courage
+          the <br /> courage
         </h1>
-        <Button className="z-1">Register now</Button>
+        <Button className="z-1 text-2xl max-md:ml-auto max-md:mr-auto">Register now</Button>
       </div>
     </section>
   );
