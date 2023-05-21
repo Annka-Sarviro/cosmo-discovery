@@ -7,7 +7,7 @@ import Phone from '../../../public/phone.svg';
 
 const ShooseRoutSection = (data: SliderObject) => {
   return (
-    <section id="shooseRoute" className="bg-darkBloue.90 relative">
+    <section id="shooseRoute" className="bg-darkBloue.90 relative ">
       <div className="z-0 absolute h-[100vh] w-[100vw]">
         <Image
           src="/shooseroute.png"

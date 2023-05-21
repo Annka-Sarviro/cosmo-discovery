@@ -18,7 +18,7 @@ const Field: FC<FieldProps> = ({ data, reg, errors }) => {
   return (
     <div className="ml-[auto] mr-[auto] relative">
       <input
-        className="relative py-3 px-9 md:py-4 md:px-16 rounded-rad32 mb-10 last:mb-0 placeholder:text-gray-600 text-darkBlue-90 bg-purple-10 min-w-[290px] md:min-w-[610px] focus:outline-transparent focus:border-transparent max-md:text-base"
+        className="relative py-3 px-9 md:py-4 md:px-16 rounded-rad32 mb-10 last:mb-0 placeholder:text-gray-600 text-darkBlue-90 bg-purple-10 max-xs:min-w-[290px] min-w-[calc(100vw_-_12rem)] md:min-w-[calc(100vw_-_35rem)] focus:outline-transparent focus:border-transparent max-md:text-base"
         type={type}
         {...reg(name)}
         name={name}
