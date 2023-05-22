@@ -1,14 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
+
+import Slide from '../model/Slide';
 import LeftDots from '../../../../public/leftDots.svg';
 import RightDots from '../../../../public/rightDots.svg';
-
-type Slide = {
-  id: number;
-  title: string;
-  src: string;
-  description: string;
-};
 
 const ChooseRoutCard = (data: Slide) => {
   return (

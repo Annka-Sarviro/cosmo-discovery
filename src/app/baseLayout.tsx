@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google';
 import { FC, PropsWithChildren } from 'react';
+
 import Header from '@/widgets/Header/Header';
 import Footer from '@/widgets/Footer/Footer';
 import Meta from '@/shared/api/Meta';

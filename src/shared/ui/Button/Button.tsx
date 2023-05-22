@@ -1,10 +1,4 @@
 import { PropsWithChildren, FC } from 'react';
-import Link from 'next/link';
-
-// interface ButtonProps {
-//   className?: string;
-//   type?: string;
-// }
 
 interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
   name?: string | undefined;

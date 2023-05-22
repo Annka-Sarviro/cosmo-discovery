@@ -1,7 +1,8 @@
+import { useRouter } from 'next/router';
+
 import Logo from '../Logo/Logo';
 import NavBar from '../NavBar/ui/NavBar';
 import ContactNavBar from '../NavBar/ui/ContactNavBar';
-import { useRouter } from 'next/router';
 
 const Header = () => {
   const { pathname } = useRouter();

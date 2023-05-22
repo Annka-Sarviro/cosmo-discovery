@@ -1,8 +1,9 @@
+import { NextPage } from 'next';
+import Image from 'next/image';
+
 import Layout from '@/app/baseLayout';
 import Bookmark from '@/shared/ui/Bookmark/Bookmark';
 import ContactUsForm from '@/features/ContactUsForm/ui/ContactUsForm';
-import { NextPage } from 'next';
-import Image from 'next/image';
 import CosmoImage from '../../../public/astronavt.svg';
 
 const Contact: NextPage = () => {

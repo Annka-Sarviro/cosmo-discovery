@@ -1,8 +1,9 @@
+import Image from 'next/image';
+
 import ChooseRoutSlider from '@/widgets/ChooseRoutSlider/ChooseRoutSlider';
 import ChooseRoutSliderMobile from '../ChooseRoutSliderMobile/ChooseRoutSliderMobile';
 import Bookmark from '@/shared/ui/Bookmark/Bookmark';
 import { SliderObject } from '../../pages/api/SliderObject';
-import Image from 'next/image';
 import Phone from '../../../public/phone.svg';
 
 const ShooseRoutSection = (data: SliderObject) => {

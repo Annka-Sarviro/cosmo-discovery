@@ -1,17 +1,14 @@
-import toast, { Toaster } from 'react-hot-toast';
 import { PropsWithChildren, FC } from 'react';
 import { useForm, Controller } from 'react-hook-form';
+import toast, { Toaster } from 'react-hot-toast';
+import { yupResolver } from '@hookform/resolvers/yup';
+
 import formField from '../api/formFields';
 import Field from '@/shared/ui/FormField/Field';
 import Button from '@/shared/ui/Button/Button';
 import { ContactUsFormSchema, contactUsFormSchema } from '../model/ContactUsFormSchema';
-import { yupResolver } from '@hookform/resolvers/yup';
 import Checkbox from '@/shared/ui/Checkbox/Checkbox';
-
-interface ContsctFormProps {
-  className?: string;
-  onComplete?: () => void;
-}
+import ContsctFormProps from '../model/ContsctFormProps';
 
 const notify = () =>
   toast.success('Thank you for your interest, your message has been sent.', {

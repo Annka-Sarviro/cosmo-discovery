@@ -1,9 +1,10 @@
-import Layout from '@/app/baseLayout';
 import { NextPage } from 'next';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
-import CosmoImage from '../../../public/astronavt.svg';
 import { useRouter } from 'next/router';
+
+import CosmoImage from '../../../public/astronavt.svg';
+import Layout from '@/app/baseLayout';
 
 const Rout: NextPage = () => {
   const { pathname } = useRouter();

@@ -1,6 +1,7 @@
 import { NextPage } from 'next';
-import Button from '@/shared/ui/LinkButton/LinkButton';
 import Image from 'next/image';
+
+import Button from '@/shared/ui/LinkButton/LinkButton';
 
 const Hero: NextPage = () => {
   return (
