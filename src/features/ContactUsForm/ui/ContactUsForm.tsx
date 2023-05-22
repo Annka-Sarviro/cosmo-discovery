@@ -43,7 +43,11 @@ const ContactUsForm: FC<PropsWithChildren<ContsctFormProps>> = props => {
   return (
     <div className={props.className}>
       <Toaster />
-      <form onSubmit={handleSubmit(onSubmitHandler)} className="flex flex-col">
+      <form
+        onSubmit={handleSubmit(onSubmitHandler)}
+        className="flex flex-col"
+        aria-label="Contact us"
+      >
         {formField.map((el, ind) => (
           <Field key={ind} data={el} reg={register} errors={errors} />
         ))}

@@ -22,7 +22,7 @@ const ChooseRoutCard = (data: Slide) => {
       />
       <div className="flex justify-center items-center">
         <LeftDots className="max-[570px]:invisible" />
-        <Link className="mx-4 max-md:text-base" href={`/${encodeURIComponent(data.id)}`}>
+        <Link className="mx-4 max-md:text-base" href={`/rout/${encodeURIComponent(data.id)}`}>
           {data.title}
         </Link>
         <RightDots className="max-[570px]:invisible" />

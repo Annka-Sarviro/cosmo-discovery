@@ -1,13 +1,15 @@
 import Layout from '@/app/baseLayout';
-import Bookmark from '@/shared/ui/Bookmark/Bookmark';
-import ContactUsForm from '@/features/ContactUsForm/ui/ContactUsForm';
 import { NextPage } from 'next';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import CosmoImage from '../../../public/astronavt.svg';
+import { useRouter } from 'next/router';
 
-const Contact: NextPage = () => {
+const Rout: NextPage = () => {
+  const { pathname } = useRouter();
+
   return (
-    <Layout title="Contact" description="We like cosmo">
+    <Layout title="Rout" description="what route do you like?">
       <div className="z-0 absolute h-[100vh] w-[100vw]">
         <Image
           src="/shooseroute.png"
@@ -18,12 +20,10 @@ const Contact: NextPage = () => {
         />
       </div>
       <section className="py-52 relative">
-        <Bookmark>Contact With us</Bookmark>
-        <ContactUsForm className="mt-32 flex justify-center" />
-        <CosmoImage className="absolute bottom-[-80px] left-[73px] scale-50 xl:bottom-7 xl:scale-75 xl:left-40" />
+        <h1>Rout page</h1>
       </section>
     </Layout>
   );
 };
 
-export default Contact;
+export default Rout;

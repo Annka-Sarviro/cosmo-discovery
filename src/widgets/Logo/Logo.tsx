@@ -10,6 +10,7 @@ const Logo: FC = () => {
           alt="logo image"
           width={56}
           height={97}
+          priority
           className="drop-shadow-accentShadow w-auto"
         />
         <div className="flex items-center font-bold  uppercase ml-5 before:content-[''] before:block before:bg-white before:mr-3  before:w-1 before:h-24 before:shadow-accentShadow">
