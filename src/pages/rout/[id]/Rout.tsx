@@ -13,7 +13,7 @@ const Rout: NextPage = () => {
     <Layout title="Rout" description="what route do you like?">
       <div className="z-0 absolute h-[100vh] w-[100vw]">
         <Image
-          src="/shooseroute.png"
+          src="/chooseRoute.png"
           alt="stars bacground image"
           fill
           sizes="100vh"

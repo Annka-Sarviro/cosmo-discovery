@@ -7,13 +7,13 @@ export const ContactUsFormSchema = yup.object({
   phone: yup
     .string()
     .required({ message: 'phone is required' })
-    .min(6, { message: 'phone must be atleast 6 characters' }),
+    .min(6, { message: 'phone must be at least 6 characters' }),
   firstname: yup
     .string()
     .lowercase()
     .trim()
     .required({ message: 'name is required' })
-    .min(3, { message: 'name must be atleast 3 characters' }),
+    .min(3, { message: 'name must be at least 3 characters' }),
   checkbox: yup.boolean().oneOf([true], 'checkbox must be checked'),
 });
 

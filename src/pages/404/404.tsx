@@ -1,15 +1,16 @@
 import { NextPage } from 'next';
 import Image from 'next/image';
-import Head from 'next/head';
+import Layout from '@/app/baseLayout';
 
 const NotFound: NextPage = () => {
   return (
     <>
-      <Head>
-        <title>Cosmo Dyscovery</title>
-      </Head>
-      <h2>Page not found</h2>
-      <Image src="/404_1.png" alt="page not found" width={400} height={400} />
+      <Layout title="404" description="Page not found">
+        <div className="containers h-[100wh] py-36">
+          <Image src="/404_1.png" alt="page not found" width={400} height={400} />
+          <h2>Page not found</h2>
+        </div>
+      </Layout>
     </>
   );
 };

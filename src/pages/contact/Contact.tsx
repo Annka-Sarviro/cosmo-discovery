@@ -11,17 +11,17 @@ const Contact: NextPage = () => {
     <Layout title="Contact" description="We like cosmo">
       <div className="z-0 absolute h-[100vh] w-[100vw]">
         <Image
-          src="/shooseroute.png"
+          src="/chooseRoute.png"
           alt="stars bacground image"
           fill
           sizes="100vh"
           className="-z-10"
         />
       </div>
-      <section className="py-52 relative">
-        <Bookmark>Contact With us</Bookmark>
+      <section className="pt-44 pb-32 relative">
+        <Bookmark className="">Contact With us</Bookmark>
         <ContactUsForm className="mt-32 flex justify-center" />
-        <CosmoImage className="absolute bottom-[-80px] left-[73px] scale-50 xl:bottom-7 xl:scale-75 xl:left-40" />
+        <CosmoImage className="absolute bottom-[-130px] left-[73px] scale-[0.3] md:scale-50 xl:bottom-7 xl:scale-75 xl:left-40" />
       </section>
     </Layout>
   );

@@ -22,9 +22,9 @@ const Checkbox: React.FC<CheckboxProps> = ({ checked, onChange, name, errors }) 
           onChange={handleCheckboxChange}
           name={name}
           className="w-6 h-6 mr-2"
-          aria-labelledby="chekbox"
+          aria-labelledby="checkbox"
         />
-        <span id="chekbox" className="text-[0.45em] text-left md:text-lg">
+        <span id="checkbox" className="text-[0.45em] text-left md:text-lg">
           Click in the box &quot;I agree to the terms and conditions&quot;.
         </span>
         <div className="absolute top-8 left-6 text-base text-purple-30">

@@ -1,18 +1,18 @@
 import Image from 'next/image';
 
 import ChooseRoutSlider from '@/widgets/ChooseRoutSlider/ChooseRoutSlider';
-import ChooseRoutSliderMobile from '../ChooseRoutSliderMobile/ChooseRoutSliderMobile';
+import ChooseRoutSliderMobile from '@/widgets/ChooseRoutSliderMobile/ChooseRoutSliderMobile';
 import Bookmark from '@/shared/ui/Bookmark/Bookmark';
-import { SliderObject } from '../../pages/api/SliderObject';
+import { SliderObject } from '@/pages/api/SliderObject';
 import Phone from '../../../public/phone.svg';
 
-const ShooseRoutSection = (data: SliderObject) => {
+const ChooseRoutSection = (data: SliderObject) => {
   return (
-    <section id="shooseRoute" className="bg-darkBloue.90 relative ">
+    <section id="chooseRoute" className="bg-darkBlue.90 relative ">
       <div className="z-0 absolute h-[100vh] w-[100vw]">
         <Image
-          src="/shooseroute.png"
-          alt="stars bacground image"
+          src="/chooseRoute.png"
+          alt="stars background image"
           fill
           sizes="100vh"
           className="-z-10 object-cover"
@@ -20,13 +20,13 @@ const ShooseRoutSection = (data: SliderObject) => {
       </div>
       <Bookmark className="mt-[68px]">Choose you route</Bookmark>
       <div className="containers pt-[68px] pb-[68px]">
-        <div className="max-md:hidden">
+        <ul className="max-md:hidden">
           <ChooseRoutSlider {...data} />
-        </div>
+        </ul>
 
-        <div className="md:hidden">
+        <ul className="md:hidden">
           <ChooseRoutSliderMobile {...data} />
-        </div>
+        </ul>
         <div className="flex items-center justify-center">
           <a href="tel:+00000000" className="flex">
             <p className="text-center mr-scale-110">
@@ -40,4 +40,4 @@ const ShooseRoutSection = (data: SliderObject) => {
   );
 };
 
-export default ShooseRoutSection;
+export default ChooseRoutSection;

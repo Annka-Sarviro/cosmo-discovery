@@ -1,4 +1,4 @@
-import { SliderObject } from '../../pages/api/SliderObject';
+import { SliderObject } from '@/pages/api/SliderObject';
 import ChooseRoutCard from '@/entities/ChooseRoutCard/ui/ChooseRoutCard';
 
 const ChooseRoutSliderMobile = (data: SliderObject) => {

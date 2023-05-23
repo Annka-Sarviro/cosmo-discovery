@@ -11,11 +11,9 @@ const inter = Inter({ subsets: ['cyrillic'], weight: ['400', '700'], display: 's
 const Layout: FC<PropsWithChildren<IMeta>> = ({ children, title, description }) => {
   return (
     <Meta title={title} description={description}>
-      <main style={inter.style}>
-        <Header />
-        {children}
-        <Footer />
-      </main>
+      <Header />
+      <main style={inter.style}>{children}</main>
+      <Footer />
     </Meta>
   );
 };

@@ -4,7 +4,7 @@ import navApi from '../api/navApi';
 
 const ContactNavBar = () => {
   return (
-    <div className="max-md:invisible">
+    <nav className="max-md:invisible">
       {navApi.map((el, ind) => (
         <Link
           key={ind}
@@ -14,7 +14,7 @@ const ContactNavBar = () => {
           <span>{el.name}</span>
         </Link>
       ))}
-    </div>
+    </nav>
   );
 };
 

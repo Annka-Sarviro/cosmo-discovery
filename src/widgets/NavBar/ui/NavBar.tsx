@@ -3,7 +3,7 @@ import navApi from '../api/navApi';
 
 const NavBar = () => {
   return (
-    <div className="flex w-[max-content] max-[630px]:absolute max-[630px]:text-base max-[630px]:right-1/2 max-[630px]:translate-x-1/2 max-md:top-[120px]">
+    <nav className="flex w-[max-content] max-[630px]:absolute max-[630px]:text-base max-[630px]:right-1/2 max-[630px]:translate-x-1/2 max-md:top-[120px]">
       {navApi.map((el, ind) => (
         <Link
           key={ind}
@@ -18,7 +18,7 @@ const NavBar = () => {
           <p>{el.name}</p>
         </Link>
       ))}
-    </div>
+    </nav>
   );
 };
 

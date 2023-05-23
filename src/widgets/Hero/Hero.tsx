@@ -9,7 +9,7 @@ const Hero: NextPage = () => {
       <div className="z-0 absolute h-[100vh] w-[100vw]">
         <Image
           src="/hero.png"
-          alt="cosmos bakcground image"
+          alt="cosmos background image"
           fill
           sizes="100vh"
           className="-z-50a  object-cover"
@@ -17,7 +17,8 @@ const Hero: NextPage = () => {
       </div>
       <div className="containers h-[100vh] w-[100vw] flex flex-col items-end justify-between text-right max-md:text-base pt-[165px] pb-[88px]">
         <p className="max-w-[262px] md:max-w-[410px]">
-          If you are up for that adventure, if you are realy free, discover new space routes with us
+          If you are up for that adventure, if you are really free, discover new space routes with
+          us
         </p>
         <h1 className="block text-4xl ml-auto mr-auto md:text-5xl text-transform: uppercase text-center">
           find <br />

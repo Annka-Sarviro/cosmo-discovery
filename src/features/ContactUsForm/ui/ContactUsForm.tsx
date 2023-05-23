@@ -8,7 +8,7 @@ import Field from '@/shared/ui/FormField/Field';
 import Button from '@/shared/ui/Button/Button';
 import { ContactUsFormSchema, contactUsFormSchema } from '../model/ContactUsFormSchema';
 import Checkbox from '@/shared/ui/Checkbox/Checkbox';
-import ContsctFormProps from '../model/ContsctFormProps';
+import ContactFormProps from '../model/ContactFormProps';
 
 const notify = () =>
   toast.success('Thank you for your interest, your message has been sent.', {
@@ -16,7 +16,7 @@ const notify = () =>
     position: 'top-center',
   });
 
-const ContactUsForm: FC<PropsWithChildren<ContsctFormProps>> = props => {
+const ContactUsForm: FC<PropsWithChildren<ContactFormProps>> = props => {
   const {
     formState: { errors, isValid },
     handleSubmit,

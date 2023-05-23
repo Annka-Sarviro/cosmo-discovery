@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import dataJson from '../../entities/ChooseRoutCard/api/sliders.json';
+import dataJson from '@/entities/ChooseRoutCard/api/sliders.json';
 
 interface SliderItem {
   id: number;
