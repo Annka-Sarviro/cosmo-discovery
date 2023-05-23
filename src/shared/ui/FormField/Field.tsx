@@ -26,7 +26,7 @@ const Field: FC<FieldProps> = ({ data, reg, errors }) => {
         aria-label={placeholder}
       />
       <div className="absolute top-[48px] md:top-[75px] left-6 text-base text-purple-30">
-        {errors[name] && <p>{Object.values(errors[name].message)}</p>}
+        {errors[name] && <p>{...Object.values(errors[name].message)}</p>}
       </div>
     </div>
   );

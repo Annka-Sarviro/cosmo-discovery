@@ -28,7 +28,7 @@ const ContactUsForm: FC<PropsWithChildren<ContactFormProps>> = props => {
       checkbox: false,
     },
     resolver: yupResolver(ContactUsFormSchema),
-    mode: 'onBlur',
+    mode: 'all',
   });
 
   const onSubmitHandler = (data: contactUsFormSchema) => {
