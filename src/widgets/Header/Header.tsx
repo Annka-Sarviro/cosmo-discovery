@@ -26,12 +26,14 @@ const Header = () => {
 
   return (
     <header
-      className={`containers flex justify-between items-center py-4 fixed w-[100%] z-20 top-0 left-0 right-0  ${
+      className={`py-4 fixed w-[100vw] z-20 top-0 left-0 right-0  ${
         transparent ? 'bg-transparent' : 'bg-darkBlue-90 bg-opacity-75'
       }`}
     >
-      <Logo />
-      {pathname === '/' ? <NavBar /> : <ContactNavBar />}
+      <div className={`containers flex justify-between items-center `}>
+        <Logo />
+        {pathname === '/' ? <NavBar /> : <ContactNavBar />}
+      </div>
     </header>
   );
 };
