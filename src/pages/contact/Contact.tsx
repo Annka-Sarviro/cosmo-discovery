@@ -20,7 +20,7 @@ const Contact: NextPage = () => {
       </div>
       <section className="pt-44 pb-32 relative">
         <Bookmark className="">Contact With us</Bookmark>
-        <ContactUsForm className="mt-32 flex justify-center" />
+        <ContactUsForm className="max-md:mt-16 mt-32 flex justify-center" />
         <CosmoImage className="absolute bottom-[-130px] left-[73px] scale-[0.3] md:scale-50 xl:bottom-[-150px] xl:scale-75 xl:left-40" />
       </section>
     </Layout>

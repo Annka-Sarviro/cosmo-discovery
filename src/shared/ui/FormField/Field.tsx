@@ -1,6 +1,5 @@
 import { FC } from 'react';
-import { FieldValues, UseFormRegister, FieldErrors } from 'react-hook-form';
-import { ContactUsFormSchema } from '@/features/ContactUsForm/model/ContactUsFormSchema';
+import { UseFormRegister } from 'react-hook-form';
 
 interface FieldProps {
   data: {

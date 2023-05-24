@@ -18,7 +18,7 @@ const notify = () =>
 
 const ContactUsForm: FC<PropsWithChildren<ContactFormProps>> = props => {
   const {
-    formState: { errors, isValid },
+    formState: { errors },
     handleSubmit,
     register,
     control,
