@@ -1,5 +1,4 @@
 import { InferGetStaticPropsType } from 'next';
-import { Suspense } from 'react';
 
 import Home from './home/Home';
 import { SliderObject } from './api/SliderObject';
