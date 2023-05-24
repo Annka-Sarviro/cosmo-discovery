@@ -1,19 +1,18 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 
 import Slide from '../model/Slide';
 import LeftDots from '../../../../public/leftDots.svg';
 import RightDots from '../../../../public/rightDots.svg';
 import Spinner from '../../../../public/spinner.svg';
 
-import { useState } from 'react';
-// import Loading from '@/app/Loading';
-
 const ChooseRoutCard = (data: Slide) => {
   const [isLoading, setIsLoading] = useState(true);
   const handleLoadingComplete = () => {
     setIsLoading(false);
   };
+
   return (
     <li className="relative">
       {isLoading && (
