@@ -32,7 +32,7 @@ const Header = () => {
     >
       <div className={`containers flex justify-between items-center `}>
         <Logo />
-        {pathname === '/' ? <NavBar /> : <ContactNavBar />}
+        {pathname === '/' || pathname === '/rout/[id]' ? <NavBar /> : <ContactNavBar />}
       </div>
     </header>
   );
