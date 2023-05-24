@@ -3,6 +3,7 @@ type Slide = {
   title: string;
   src: string;
   description: string;
+  alt: string;
 };
 
 export default Slide;

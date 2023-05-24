@@ -3,18 +3,21 @@
     "id": 1,
     "title": "Hitchhiking through the solar system route",
     "src": "/slider4.png",
-    "description": "description1"
+    "description": "planets of the solar system in the universe",
+    "alt": "planets of the solar system in the universe"
 },
 "slider2": {
     "id": 2,
     "title": "Kyiv-Saturn Rally",
     "src": "/slider2.png",
-    "description": "description2"
+    "description": "spaceships in the universe",
+    "alt": "spaceships in the universe"
 },
 "slider3": {
     "id": 3,
     "title": "Back to the constellation of Aquarius",
     "src": "/slider3.png",
-    "description": "description"
+    "description": "helix nebula space and stars",
+    "alt": "helix nebula space and stars"
 }
 }

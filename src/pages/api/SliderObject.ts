@@ -4,5 +4,6 @@ export interface SliderObject {
     title: string;
     src: string;
     description: string;
+    alt:string
   };
 }
