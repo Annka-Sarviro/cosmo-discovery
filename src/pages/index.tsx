@@ -9,7 +9,7 @@ export default function HomePage({ data }: InferGetStaticPropsType<typeof getSta
 
 export const getStaticProps = async () => {
   try {
-    const res = await fetch(`${process.env.API_HOST}/getSlide`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_HOST}/api/getSlide`);
     const data: SliderObject = await res.json();
 
     return {
