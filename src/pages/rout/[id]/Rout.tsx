@@ -22,7 +22,7 @@ const Rout: NextPage = () => {
     async function getData() {
       const staticData = await fetch(`${process.env.NEXT_PUBLIC_API_HOST}/api/getSlideById/${id}`);
       const data = await staticData.json();
-      console.log(data);
+
       if (!data) {
         return;
       }
