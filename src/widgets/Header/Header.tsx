@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Logo from '@/widgets/Logo/Logo';
 import NavBar from '@/widgets/NavBar/ui/NavBar';
 import ContactNavBar from '@/widgets/NavBar/ui/ContactNavBar';
+import RoutNavBar from '../NavBar/ui/RoutNavBar';
 
 const Header = () => {
   const { pathname } = useRouter();
@@ -32,7 +33,9 @@ const Header = () => {
     >
       <div className={`containers flex justify-between items-center `}>
         <Logo />
-        {pathname === '/' || pathname === '/rout/[id]' ? <NavBar /> : <ContactNavBar />}
+        {pathname === '/rout/[id]' && <RoutNavBar />}
+        {pathname === '/contact' && <ContactNavBar />}
+        {pathname === '/' && <NavBar />}
       </div>
     </header>
   );
