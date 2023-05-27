@@ -21,10 +21,11 @@ const ChooseRoutCard = (data: Slide) => {
         </div>
       )}
       <Image
-        src={data.src}
-        alt={data.alt}
-        height={522}
-        width={836}
+        data={data.img.coverImage.responsiveImage}
+        // src={data.src}
+        // alt={data.alt}
+        // height={522}
+        // width={836}
         className="mx-auto max-md:mb-6 rounded-rad16 shadow-slideShadow"
         onLoadingComplete={handleLoadingComplete}
       />
