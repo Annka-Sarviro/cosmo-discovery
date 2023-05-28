@@ -28,6 +28,9 @@ const nextConfig = {
     return config
   },
   reactStrictMode: true,
+  images: {
+    domains: ["www.datocms-assets.com"],
+  },
   experimental: {
     appDir: false,
   },

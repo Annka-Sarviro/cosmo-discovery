@@ -1,27 +1,44 @@
 import { InferGetStaticPropsType } from 'next';
+import { request } from '@/lib/datocms';
 
 import Home from './home/Home';
 import { SliderObject } from './api/SliderObject';
 
-export default function HomePage({ data }: InferGetStaticPropsType<typeof getStaticProps>) {
-  return <Home {...data} />;
+const HOMEPAGE_QUERY = `query HomePage {
+  
+  allRouts {
+    id
+    title
+    _status
+    img {
+      id
+      url
+      responsiveImage {
+        src
+        height
+        width
+        base64
+        alt
+        srcSet
+        sizes
+        webpSrcSet
+        title
+        bgColor
+        aspectRatio
+      }
+    }
+  }
+
+}`;
+export async function getStaticProps() {
+  const data: SliderObject = await request({
+    query: HOMEPAGE_QUERY,
+  });
+  return {
+    props: data,
+  };
 }
 
-export const getStaticProps = async () => {
-  try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_HOST}/api/getSlide`);
-    const data: SliderObject = await res.json();
-
-    return {
-      props: {
-        data,
-      },
-    };
-  } catch {
-    return {
-      props: {
-        data: null,
-      },
-    };
-  }
-};
+export default function HomePage(data: InferGetStaticPropsType<typeof getStaticProps>) {
+  return <Home {...data.allRouts} />;
+}

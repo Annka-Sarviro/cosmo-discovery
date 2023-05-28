@@ -1,7 +1,12 @@
 type Slide = {
   id: number;
   title: string;
-  src: string;
+  img: {
+    url: string;
+    alt: string;
+    id: string;
+    size: number;
+  };
   description: string;
   alt: string;
 };

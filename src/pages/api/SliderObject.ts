@@ -1,9 +1,17 @@
 export interface SliderObject {
-  [key: string]: {
-    id: number;
-    title: string;
-    src: string;
-    description: string;
-    alt:string
+  [key: string]: 
+  {
+    allRouts: [
+    {id: number;
+  title: string;
+  img: {
+    url: string;
+    alt: string;
+    id: string;
+    size: number;
   };
+  description: string;
+  alt: string;}
+]
+}
 }
