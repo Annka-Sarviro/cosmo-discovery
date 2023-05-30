@@ -3,10 +3,37 @@ import Image from 'next/image';
 import ChooseRoutSlider from '@/widgets/ChooseRoutSlider/ChooseRoutSlider';
 import ChooseRoutSliderMobile from '@/widgets/ChooseRoutSliderMobile/ChooseRoutSliderMobile';
 import Bookmark from '@/shared/ui/Bookmark/Bookmark';
-import { SliderObject } from '@/pages/api/SliderObject';
+// import { SliderObject } from '@/pages/api/SliderObject';
 import Phone from '../../../public/phone.svg';
 
+interface SliderObject {
+  [key: string]: {
+    id: string;
+    title: string;
+    _status: string;
+    img: {
+      id: string;
+      url: string;
+      alt: string;
+      responsiveImage: {
+        src: string;
+        height: number;
+        width: number;
+        base64: string;
+        alt: string;
+        srcSet: string;
+        sizes: string;
+        webpSrcSet: string;
+        title: string | null;
+        bgColor: string;
+        aspectRatio: number;
+      };
+    };
+  };
+}
+
 const ChooseRoutSection = (data: SliderObject) => {
+  console.log(data);
   return (
     <section id="chooseRoute" className="bg-darkBlue.90 relative ">
       <div className="z-0 absolute h-[100vh] w-[100vw]">

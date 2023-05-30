@@ -9,6 +9,7 @@ import Button from '@/shared/ui/Button/Button';
 import { ContactUsFormSchema, contactUsFormSchema } from '../model/ContactUsFormSchema';
 import Checkbox from '@/shared/ui/Checkbox/Checkbox';
 import ContactFormProps from '../model/ContactFormProps';
+import axios from 'axios';
 
 const notify = () =>
   toast.success('Thank you for your interest, your message has been sent.', {
@@ -32,7 +33,17 @@ const ContactUsForm: FC<PropsWithChildren<ContactFormProps>> = props => {
   });
 
   const onSubmitHandler = (data: contactUsFormSchema) => {
-    notify();
+    const TOKEN = '5921706384:AAE8BqSi4TTNxh8yEp7nEOhBvIv4ejYBjVQ';
+    const CHAT_ID = '-1001866687565';
+    const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+    let message = `
+      <b> You mess: ${data.firstname}</b>
+    `;
+    axios.post(URI_API, {
+      chat_id: CHAT_ID,
+      parse_mode: 'html',
+      text: message,
+    });
     reset();
     console.log(data);
   };

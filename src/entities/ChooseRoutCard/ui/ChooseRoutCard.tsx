@@ -1,4 +1,4 @@
-import { Image } from 'react-datocms';
+import { Image, ResponsiveImageType } from 'react-datocms';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -8,6 +8,7 @@ import RightDots from '../../../../public/rightDots.svg';
 import Spinner from '../../../../public/spinner.svg';
 
 const ChooseRoutCard = (el: Slide) => {
+  console.log(el);
   const [isLoading, setIsLoading] = useState(true);
   const handleLoadingComplete = () => {
     setIsLoading(false);
@@ -22,7 +23,6 @@ const ChooseRoutCard = (el: Slide) => {
       )}
       <Image
         data={el.img.responsiveImage}
-        alt={el?.img?.alt}
         className="mx-auto max-md:mb-6 rounded-rad16 shadow-slideShadow"
         onLoadingComplete={handleLoadingComplete}
       />

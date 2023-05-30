@@ -5,14 +5,14 @@ import Home from './home/Home';
 import { SliderObject } from './api/SliderObject';
 
 const HOMEPAGE_QUERY = `query HomePage {
-  
-  allRouts {
+    allRouts {
     id
     title
     _status
     img {
       id
       url
+      alt
       responsiveImage {
         src
         height
@@ -34,6 +34,7 @@ export async function getStaticProps() {
   const data: SliderObject = await request({
     query: HOMEPAGE_QUERY,
   });
+
   return {
     props: data,
   };

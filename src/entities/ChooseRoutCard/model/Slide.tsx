@@ -1,14 +1,28 @@
+import { ResponsiveImageType } from 'react-datocms';
+
 type Slide = {
-  id: number;
+  id: string;
+  alt: string;
+  description: string;
   title: string;
   img: {
-    url: string;
     alt: string;
-    id: string;
-    size: number;
+    responsiveImage: ResponsiveImageType;
   };
-  description: string;
-  alt: string;
 };
+
+interface ResponsiveImage {
+  src: string;
+  height: number;
+  width: number;
+  base64: string;
+  alt: string;
+  srcSet: string;
+  sizes: string;
+  webpSrcSet: string;
+  title: string | null;
+  bgColor: string;
+  aspectRatio: number;
+}
 
 export default Slide;
