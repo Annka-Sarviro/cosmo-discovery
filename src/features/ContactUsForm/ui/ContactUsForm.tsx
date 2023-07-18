@@ -2,6 +2,7 @@ import { PropsWithChildren, FC } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import toast, { Toaster } from 'react-hot-toast';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { Resolver } from 'react-hook-form';
 
 import formField from '../api/formFields';
 import Field from '@/shared/ui/FormField/Field';
@@ -9,6 +10,13 @@ import Button from '@/shared/ui/Button/Button';
 import { ContactUsFormSchema, contactUsFormSchema } from '../model/ContactUsFormSchema';
 import Checkbox from '@/shared/ui/Checkbox/Checkbox';
 import ContactFormProps from '../model/ContactFormProps';
+
+interface FormData {
+  email: string;
+  phone: string;
+  firstname: string;
+  checkbox: boolean;
+}
 
 const notify = () =>
   toast.success('Thank you for your interest, your message has been sent.', {
@@ -23,11 +31,11 @@ const ContactUsForm: FC<PropsWithChildren<ContactFormProps>> = props => {
     register,
     control,
     reset,
-  } = useForm<contactUsFormSchema>({
+  } = useForm<FormData>({
     defaultValues: {
       checkbox: false,
     },
-    resolver: yupResolver(ContactUsFormSchema),
+    resolver: yupResolver(ContactUsFormSchema) as Resolver<FormData, object>,
     mode: 'all',
   });
 
